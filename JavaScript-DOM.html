@@ -10,7 +10,7 @@
 
 <body>
 
-    <div id="container"></div>
+
 
     <script>
         const marketingShare = [
@@ -27,7 +27,9 @@
                 ];
         let Title=['排名','公司名稱','國別','市佔率'];
 
-        let container=document.getElementById('container');
+        let container=document.createElement('div');
+        container.setAttribute('id','conrainer');
+        document.body.appendChild(container);
         let Table=document.createElement('table');
         Table.style.border='3px solid black';
         Table.style.borderRadius='50px';
@@ -38,6 +40,7 @@
         Table.style.textAlign='center'
 
         window.onload=function(){
+            //第一題
             setTitle(Title);
             setBody(marketingShare);
             let mytable=document.querySelector('table');
@@ -45,6 +48,9 @@
             for(let i=1;i<td.length;i++){
                 td[i].style.paddingLeft='30px';
             }
+
+            //加分題
+
         }
 
         function setTitle(T){
